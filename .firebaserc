@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "heroes-2a770": {
+      "hosting": {
+        "front": [
+          "heroes-2a770"
+        ]
+      }
+    }
+  }
+}

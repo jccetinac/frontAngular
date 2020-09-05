@@ -30,17 +30,12 @@ describe('HeroesComponent', () => {
     fixture.detectChanges();
   });
 
-/*   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
- */
 it('should render title', () => {
     const fixture = TestBed.createComponent(HeroesComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     const heroes = fixture.debugElement.componentInstance;
     expect(heroes.title).toEqual('Heroes is running!');
-    //expect(compiled.querySelector('.container h1').textContent).toContain('Heroes is running!');
   }); 
   
 });

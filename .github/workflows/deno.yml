@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: '10.x'
       - name: npm i
-        run: cd frontend && npm i
+        run: npm i
       - name: e2e
-        run: cd frontend && npm run e2e
+        run: npm run e2e

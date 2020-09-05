@@ -1,9 +1,13 @@
 <div class="row pt-5">
+
     <div class="col-md-4">
         <div class="card p-4 ">
-        <img class="card-img-top" [src]="heroe?.img" [alt]="heroe?.nombre">
-        <button type="button" [routerLink]="['/heroes']" class="btn btn-dark btn-block mt-4" >Back</button> 
-
+            <img class="card-img-top" [src]="heroe?.img" [alt]="heroe?.nombre">
+            <button 
+                type="button" 
+                [routerLink]="['/heroes']" 
+                class="btn btn-dark btn-block mt-4">Back
+            </button>
         </div>
     </div>
 
@@ -13,8 +17,12 @@
                 <h4 class="card-title pt-2">{{heroe?.nombre}}</h4>
                 <p class="card-text"><small class="text-muted">{{heroe?.aparicion}}</small></p>
                 <p class="card-text">{{heroe?.bio}}</p>
-                <button class="btn btn-danger mt-4" (click)="deleteHeroe(heroe?.id)">Delete</button>
+                <button 
+                    class="btn btn-danger mt-4" 
+                    (click)="deleteHeroe(heroe?.id)">Delete
+                </button>
             </div>
         </div>
-    </div>   
+    </div>
+
 </div>

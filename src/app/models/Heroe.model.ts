@@ -4,8 +4,8 @@ export class HeroeModel {
     bio?: string;
     img?: string;
     aparicion?: string;
-    casa?:string;
+    casa?: string;
 
-    constructor(){
+    constructor() {
     }
 }

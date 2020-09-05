@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//route
+// extras
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http'; 
 
-// Services
+// services
 import { HeroesService } from './services/heroes.service';
 
 //components

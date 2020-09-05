@@ -7,12 +7,11 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-hero',
-  templateUrl: './add-hero.component.html',
-  styleUrls: ['./add-hero.component.scss']
+  templateUrl: './add-hero.component.html'
 })
 export class AddHeroComponent implements OnInit {
 
-  heroe : HeroeModel = new HeroeModel;
+  heroe: HeroeModel = new HeroeModel;
 
   constructor(
     private heroesService: HeroesService,
@@ -23,14 +22,14 @@ export class AddHeroComponent implements OnInit {
 
   }
 
-  guardar(form: NgForm){
+  guardar(form: NgForm) {
 
-    if (form.invalid){
+    if (form.invalid) {
       return null;
     }
 
     this.heroesService.createHeroe(this.heroe).pipe(
-      tap(()=> this.router.navigate(['/heroes']) )
+      tap(() => this.router.navigate(['/heroes']))
     ).subscribe();
 
   }

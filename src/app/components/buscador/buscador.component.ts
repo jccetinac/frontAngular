@@ -6,13 +6,14 @@ import { HeroeModel } from 'src/app/models/Heroe.model';
 
 @Component({
   selector: 'app-buscador',
-  templateUrl: './buscador.component.html',
-  styleUrls: ['./buscador.component.scss']
+  templateUrl: './buscador.component.html'
 })
+
 export class BuscadorComponent implements OnInit {
 
   termino: string;
   heroes: HeroeModel[];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private heroesService: HeroesService,
@@ -21,14 +22,14 @@ export class BuscadorComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
-      tap(params=> this.termino= params.termino),
-      tap(()=>this.heroes=this.heroesService.searchHeroe(this.termino))
+      tap(params => this.termino = params.termino),
+      tap(() => this.heroes = this.heroesService.searchHeroe(this.termino))
     ).subscribe();
     ;
 
   }
 
-  verHeroe(id:string){
+  verHeroe(id: string) {
     this.router.navigate(['/heroe', id]);
   }
 

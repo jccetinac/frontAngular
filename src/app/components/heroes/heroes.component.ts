@@ -6,12 +6,12 @@ import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  templateUrl: './heroes.component.html'
 })
+
 export class HeroesComponent implements OnInit {
 
-  heroes:HeroeModel[]= [];
+  heroes: HeroeModel[] = [];
   constructor(
     private heroesService: HeroesService,
     private router: Router
@@ -19,11 +19,11 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroesService.getHeroes$().pipe(
-      tap(heroesList=>this.heroes= heroesList)
+      tap(heroesList => this.heroes = heroesList)
     ).subscribe();
   }
 
-  verHeroe(id:number){
+  verHeroe(id: number) {
     this.router.navigate(['/heroe', id]);
   }
 

@@ -12,6 +12,7 @@ import { tap } from 'rxjs/operators';
 export class HeroesComponent implements OnInit {
 
   heroes: HeroeModel[] = [];
+  title: string = 'Heroes is running!';
   constructor(
     private heroesService: HeroesService,
     private router: Router

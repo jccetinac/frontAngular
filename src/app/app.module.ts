@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http'; 
-
+import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 // services
 import { HeroesService } from './services/heroes.service';
 
@@ -32,7 +32,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientTestingModule
   ],
   providers: [
     HeroesService

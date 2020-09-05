@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from 'src/app/services/heroes.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit {
 
-  terminoBuscado: string = "a";
+  terminoBuscado: string = "";
 
   constructor(
     private router: Router
@@ -19,7 +16,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buscarHeroe(texto: string){
+  buscarHeroe(texto: string) {
     this.router.navigate(['/buscar', texto]);
   }
 

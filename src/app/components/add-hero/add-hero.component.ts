@@ -6,13 +6,12 @@ import { tap, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-add-hero',
+  templateUrl: './add-hero.component.html'
 })
-export class HomeComponent implements OnInit {
+export class AddHeroComponent implements OnInit {
 
-  heroe : HeroeModel = new HeroeModel;
+  heroe: HeroeModel = new HeroeModel;
 
   constructor(
     private heroesService: HeroesService,
@@ -23,14 +22,14 @@ export class HomeComponent implements OnInit {
 
   }
 
-  guardar(form: NgForm){
+  guardar(form: NgForm) {
 
-    if (form.invalid){
+    if (form.invalid) {
       return null;
     }
 
     this.heroesService.createHeroe(this.heroe).pipe(
-      tap(()=> this.router.navigate(['/heroes']) )
+      tap(() => this.router.navigate(['/heroes']))
     ).subscribe();
 
   }

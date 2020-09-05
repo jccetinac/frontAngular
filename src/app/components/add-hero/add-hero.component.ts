@@ -6,11 +6,11 @@ import { tap, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-add-hero',
+  templateUrl: './add-hero.component.html',
+  styleUrls: ['./add-hero.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AddHeroComponent implements OnInit {
 
   heroe : HeroeModel = new HeroeModel;
 
